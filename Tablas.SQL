@@ -1,21 +1,23 @@
 USE pkmn;
 CREATE DATABASE IF NOT EXISTS pkmn;
 
--- TABLA DONDE SE SUBEN LOS DATOS BASICOS DEL POKEMON
-CREATE TABLE IF NOT EXISTS pokemon (
-	id_pokedex INT PRIMARY KEY NOT NULL,
-	pokemon VARCHAR (30) NOT NULL UNIQUE,
-    tipo_primario INT NOT NULL,
-    tipo_secundario INT DEFAULT NULL,,
-    FOREIGN KEY (tipo_primario) REFERENCES tipo (id_tipo),
-    FOREIGN KEY (tipo_secundario) REFERENCES tipo (id_tipo)
-);
-
 -- TABLA PARA CARGAR LOS TIPOS DEL POKEMON
 CREATE TABLE IF NOT EXISTS tipo (
 	id_tipo INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     nombre_tipo CHAR(20) NOT NULL UNIQUE
 );
+
+
+-- TABLA DONDE SE SUBEN LOS DATOS BASICOS DEL POKEMON
+CREATE TABLE IF NOT EXISTS pokemon (
+	id_pokedex INT PRIMARY KEY NOT NULL,
+	pokemon VARCHAR (30) NOT NULL UNIQUE,
+    tipo_primario INT NOT NULL,
+    tipo_secundario INT DEFAULT NULL,
+    FOREIGN KEY (tipo_primario) REFERENCES tipo (id_tipo),
+    FOREIGN KEY (tipo_secundario) REFERENCES tipo (id_tipo)
+);
+
 
 -- Tabla para cargar los distintos ataques
 CREATE TABLE IF NOT EXISTS ataques (
