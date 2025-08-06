@@ -1,9 +1,30 @@
 USE pkmn;
 
+-- INSERCION DE TIPOS
+INSERT INTO tipo (nombre_tipo) VALUES 
+("acero"),
+("agua"),
+("bicho"),
+("dragon"),
+("electrico"),
+("fantasma"),
+("fuego"),
+("hada"),
+("hielo"),
+("lucha"),
+("normal"),
+("planta"),
+("psiquico"),
+("roca"),
+("siniestro"),
+("tierra"),
+("veneno"),
+("volador");
+
 -- INSERCION DE ESPECIES POKEMON
 -- Numero pokedex / Nombre especie / Tipo primario / Tipo secundario
 INSERT INTO pokemon VALUES
-(26, "Raichu", 5, NULL);
+(26, "Raichu", 5, NULL),
 (660, "Diggersby", 11, 16),
 (980, "Clodsire", 17, 16),
 (205, "Forretress", 3, 1),
@@ -52,29 +73,10 @@ INSERT INTO pokemon VALUES
 (748, "Toxapex", 17, 2),
 (326, "Grumpig", 13, NULL);        
 
--- INSERCION DE TIPOS
-INSERT INTO tipo (nombre_tipo) VALUES 
-("acero"),
-("agua"),
-("bicho"),
-("dragon"),
-("electrico"),
-("fantasma"),
-("fuego"),
-("hada"),
-("hielo"),
-("lucha"),
-("normal"),
-("planta"),
-("psiquico"),
-("roca"),
-("siniestro"),
-("tierra"),
-("veneno"),
-("volador");
+
 
 -- INSERCION DE MOVIMIENTOS
-INSERT INTO ataques (nombre_mov, tipo_mov, categoria) VALUES
+INSERT INTO ataques (movimiento, tipo_mov, categoria) VALUES
 ("acido", 17, "rapido"),
 ("tajo aereo", 18, "rapido"),
 ("impresionar", 6, "rapido"),
@@ -310,8 +312,8 @@ INSERT INTO entrenador (nombre, apellido, usuario, nivel, telefono, nacionalidad
 ("Patricia", "Suárez", "Patysua", 50, "+57 300 7654321", "colombia");
 
 -- INSERCION DE TORNEOS (DATOS INVENTADOS)
-INSERT INTO torneo (nombre_torneo, fecha, horario, localidad, provincia, locacion, organizado_por) VALUES
-("Regional de Cordoba", "2025-8-9", "10:00", "Cordoba", "San Juan 432", "La Pokeneta"),
+INSERT INTO torneo (nombre_torneo, fecha, horario, provincia, localidad, locacion, organizado_por) VALUES
+("Regional de Cordoba", "2025-8-9", "10:00", "Cordoba", "Cordoba", "San Juan 432", "La Pokeneta"),
 ("Regional de Buenos Aires", "2025-8-16", "11:00", "CABA", "CABA", "Av. Rivadavia 4950", "NIDOS ARG"),
 ("Invitacional Las Varillas", "2025-8-23", "16:30", "Cordoba", "Las varillas", "Luque 159", "Shadow Ball"),
 ("Evento especial VCP", "2025-8-29", "15:00", "Cordoba", "Villa Carlos Paz", "9 de Julio 500", "Shadow Ball"),
@@ -319,4 +321,4 @@ INSERT INTO torneo (nombre_torneo, fecha, horario, localidad, provincia, locacio
 ("Evento especial NIDOS ARG", "2025-9-12", "14:00", "CABA", "CABA", "Av. Rivadavia 4950", "NIDOS ARG"),
 ("Invitacional Quilmes", "2025-9-20", "15:00", "Buenos Aires", "Quilmes", "Av. Hipolito Yrigoyen", "Zona Norte PvP"),
 ("Torneo de Primavera", "2025-9-21", "11:00", "CABA", "CABA", "Av. Corrientes 4567", "PokeMasters"),
-("International Championship 2025 LATAM", "2025-10-24", "10:00", "CABA", "CABA", "Av. Santa Fe 5678", "PLAY! Pokémon"),
+("International Championship 2025 LATAM", "2025-10-24", "10:00", "CABA", "CABA", "Av. Santa Fe 5678", "PLAY! Pokémon");
