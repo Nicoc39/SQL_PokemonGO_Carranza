@@ -55,8 +55,8 @@ CREATE TABLE IF NOT EXISTS torneo (
 -- Tabla para registrar a los usuarios en los torneos
 CREATE TABLE IF NOT EXISTS registro_torneo (
     id_registro INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    id_entrenador INT NOT NULL UNIQUE,
-    id_torneo INT NOT NULL UNIQUE,
+    id_entrenador INT NOT NULL ,
+    id_torneo INT NOT NULL ,
     inscription_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_entrenador) REFERENCES entrenador(id_entrenador),
     FOREIGN KEY (id_torneo) REFERENCES torneo(id_torneo)
