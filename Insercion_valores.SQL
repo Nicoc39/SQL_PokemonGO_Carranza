@@ -126,6 +126,7 @@ INSERT INTO ataques (movimiento, tipo_mov, categoria) VALUES
 ("antiaereo", 14, "rapido"),
 ("alarido", 15, "rapido"),
 ("chispa", 5, "rapido"),
+("picotazo venenoso", 17, "rapido"),
 ("bomba acida", 17, "cargado"),
 ("acrobata", 18, "cargado"),
 ("golpe aereo", 18, "cargado"),
@@ -265,7 +266,9 @@ INSERT INTO ataques (movimiento, tipo_mov, categoria) VALUES
 ("voltio cruel", 5, "cargado"),
 ("constriccion", 11, "cargado"),
 ("tijera x", 3, "cargado"),
-("electrocañon", 5, "cargado");
+("electrocañon", 5, "cargado"),
+("arenas ardientes",16, "cargado");
+
 
 -- INSERCION DE ENTRENADORES (DATOS INVENTADOS)
 INSERT INTO entrenador (nombre, apellido, usuario, nivel, telefono, nacionalidad)
@@ -387,4 +390,4 @@ INSERT INTO registro_torneo (id_entrenador, id_torneo) VALUES
 (29,3),
 (30,3),
 (31,3),
-(33,3),
+(33,3);
