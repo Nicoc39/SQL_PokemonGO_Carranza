@@ -1,5 +1,5 @@
 /*
-COSAS PARA AGREGAR:
+COSAS PARA AGREGAR Y RESOLVER:
 AGREGADO 1) Tabla de Entrenador con datos como nombre, apellido, usuario, nivel, telefono, nacionalidad, 
 AGREGADO 2) Tabla de Torneos: nombre de torneo, fecha de torneo, horario, localidad, locacion, organizado por
 AGREGADO 3) Tabla de Registro a torneos: donde se muestre que entrenador se registro en cada torneo
@@ -12,4 +12,5 @@ AGREGADO 6) agregar a la tabla de equipo pokemon la columna de puntos de combate
 10) modificar los ataques de los pokemon en "Insercion_equipos". Actualmente no son correctos.
 11) fijate de mejorar la resolucion del diagrama.
 12) cuando tengas tiempo revisa mejor la ortografia.
+13) problema con la tabla de equipos, te genero un id por cada entrada, cuando deberia ser el mismo id para los 6 pokes del equipo.
 */
