@@ -323,7 +323,7 @@ INSERT INTO equipo (id_registro, slot_pokemon, id_pokemon, ataque_rapido, ataque
 (40, 3, 939, 9, 120, 121, 1453), -- Bellibolt
 (40, 4, 959, 8, 122, 123, 1450), -- Tinkaton
 (40, 5, 748, 17, 124, 125, 1447), -- Toxapex
-(40, 6, 326, 19, 126, 127, 1444); -- Grumpig 
+(40, 6, 326, 19, 126, 127, 1444), -- Grumpig 
 
 -- Equipo 41 (Registro 41 - Entrenador 22, Torneo 2)
 (41, 1, 26, 9, 25, 26, 1458),   -- Raichu
