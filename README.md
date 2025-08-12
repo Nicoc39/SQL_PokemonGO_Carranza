@@ -1,16 +1,6 @@
 # 🎮 Base de Datos de Torneos de Pokémon GO
 
 
-## 📋 Tabla de Contenidos
-
-- [Descripción](#descripción)
-- [Características](#características)
-- [Objetivos](#objetivos)
-- [Problema](#problema)
-- [Modelo de Negocio](#modelo-de-negocio)
-- [Estructura de la Base de Datos](#estructura-de-la-base-de-datos)
-- [Enlaces](#enlaces)
-
 
 ## 🎯 Descripción
 
@@ -96,9 +86,17 @@ La base de datos incluye las siguientes tablas:
 
 [Inserción de valores](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/Insercion_valores.SQL)
 
-[Inserción de valores](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/Insercion_Equipos.SQL)
+[Inserción de equipos](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/Insercion_Equipos.SQL)
+
+[Diagrama Entidad-Relación](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/ER_DIAGRAMA%20POKEMON.pdf)
 
 [Comentarios](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/Comentarios.SQL)
+
+---
+
+
+**Alumno:** Nicolás Carranza  
+**Comisión:** 81830
 
 </div>
 
