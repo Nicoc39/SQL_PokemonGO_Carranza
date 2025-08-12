@@ -9,5 +9,6 @@ AGREGADO 6) agregar a la tabla de equipo pokemon la columna de puntos de combate
 7) a la tabla de equipo fijate de como poner para que no se repitan los id_pokemon
 8) podrias agregar una tabla que muestre cuantos puntos de campeonato suma cada posicion en cada torneo 
 9) a la tabla de torneos podrias agregar una columna para diferenciar el tipo de torneo (regiona, invitacional, etc), cada tipo de torneo otorga una cantidad de puntos de campeonato diferente (relacionala con la tabla del punto 8)
-
+10) modificar los ataques de los pokemon en "Insercion_equipos". Actualmente no son correctos.
+11) fijate de mejorar la resolucion del diagrama.
 */
