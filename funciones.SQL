@@ -1,4 +1,4 @@
--- Función 1: Contar la cantidad de equipos registrados en un torneo
+-- Función cantidad_equipos_torneo: Contar la cantidad de equipos registrados en un torneo
 DELIMITER //
 CREATE FUNCTION cantidad_equipos_torneo(id_torneo INT)
 RETURNS INT
@@ -10,7 +10,7 @@ BEGIN
 END//
 DELIMITER ;
 
--- Función 2: Contar cuántas veces se llevó cada Pokémon en todos los torneos
+-- Función veces_pokemon_llevado: Contar cuántas veces se llevó cada Pokémon en todos los torneos
 DELIMITER //
 
 CREATE FUNCTION veces_pokemon_llevado(poke_id INT)

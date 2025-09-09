@@ -1,4 +1,4 @@
--- Stored Procedure 1: Registrar un nuevo equipo completo para un torneo
+-- Registrar un nuevo equipo completo para un torneo
 DELIMITER //
 CREATE PROCEDURE registrar_equipo_completo(
     IN id_registro INT,
@@ -20,7 +20,7 @@ END//
 DELIMITER ;
 
 
--- Stored Procedure 3: Eliminar un equipo completo de un torneo
+--  Eliminar un equipo completo de un torneo
 DELIMITER //
 CREATE PROCEDURE eliminar_equipo(IN id_registro INT)
 BEGIN

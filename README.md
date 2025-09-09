@@ -78,6 +78,31 @@ La base de datos incluye las siguientes tablas:
 - Clave primaria: `id_equipo` (identificador único del equipo).
 - Claves foráneas: `id_registro`, `id_pokemon`, `ataque_rapido`, `ataque_cargado1`, `ataque_cargado2` (relacionadas con las tablas "registro_torneo", "pokemon" y "ataques" respectivamente).
 
+## 👁️ Lista de Vistas 
+**"vista_pokemon_tipos":**
+- Compuesta por las tablas de tipo y pokemon esta vista nos permite visualizar el tipo de cada pokemon de forma escrita y no con numero de ID.
+
+**"vista_equipos_torneo":**
+- Esta vista esta compuesta por las tablas de equipo, registro_torneo, entrenador, torneo, pokemon y ataques. Estas tablas se relacionan para mostrar la informacion completa de cada equipo en cada torneo.
+Su objetivo es ver de forma agil todos los equipos registrados en un torneo en particular o en todos los torneos. Tambien permite ver el equipo de un entrenador en particular para un torneo, lo cual le permite al rival ver a que equipo se enfrenta.
+
+**"ranking_pokemon_usados":**
+- Utliza las tablas de pokemon y de equipo (a traves de la funcion "veces_pokemon_llevado"). Muestra un ranking que se basa en que cantidad de equipos se lleva cada pokemon. Su objetivo es poder ver informacion del metagame y cuales son los pokemon mas relevantes.
+
+## 🚀 Lista de Funciones
+**Función "cantidad_equipos_torneo":**
+- Utiliza la taba registro_torneo para contar los registros de un torneo en particular y devuelve la cantidad de equipos que se han registrado. Esta funcion permite saber cuantos son los equipos participantes en un torneo para agilizar el control de las inscripciones.
+
+**Función "veces_pokemon_llevado":**
+- Utiliza la tabla equipo y mediante el ID de un pokemon nos devuelve la cantidad de veces que ese pokemon fue incluido en equipos. Su objetivo es conocer la popularidad y relevancia de cada pokemon en el metagame.
+
+## 🗃️ Lista de Stored Procedures
+**Stored Procedure "registrar_equipo_completo":**
+- Esta compuesto por las tablas equipo, registro_torneo, pokemon y ataques. Permite registrar un equipo completo de un entrenador para un torneo. Su utilizacion automatiza y simplifica el proceso de inscripcion de equipos evitando errores manuales.
+
+**Stored Procedure "eliminar_equipo":**
+- Utiliza la tabla equipo para eliminar el equipo de un entrenador de un torneo en especifico. Su objetivo es una mejor gestion de bajas de manera segura.
+ 
 ## 🔗 Enlaces
 
 [GitHub](https://github.com/Nicoc39/SQL_PokemonGO_Carranza)

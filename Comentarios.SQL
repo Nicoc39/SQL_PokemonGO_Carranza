@@ -13,6 +13,9 @@ AGREGADO 6) agregar a la tabla de equipo pokemon la columna de puntos de combate
 11) fijate de mejorar la resolucion del diagrama.
 12) cuando tengas tiempo revisa mejor la ortografia.
 13) problema con la tabla de equipos, te genero un id por cada entrada, cuando deberia ser el mismo id para los 6 pokes del equipo.
+14)cambiale el nombre a las vistas (opcional)
+15) agrega stored procedures para actualizar datos de un entrenador.
+16)
 */
 
 /* CORRECCION PRIMERA ENTREGA:
@@ -40,4 +43,5 @@ AGREGADO 6) agregar a la tabla de equipo pokemon la columna de puntos de combate
 -se creo trigger para que el cp maximo no supere 1500
 -se creo archivo de stored procedures 
 -se crearon procedimientos de almacenados para registrar y eliminar equipos
+-se modificaron todos los valores de insercion_equipos ya que la IA me habia creado equipos identicos en todos los valores
 */
