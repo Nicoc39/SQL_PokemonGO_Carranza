@@ -113,6 +113,14 @@ Su objetivo es ver de forma agil todos los equipos registrados en un torneo en p
 
 [Inserción de equipos](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/Insercion_Equipos.SQL)
 
+[Creación de vistas](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/vistas.sql)
+
+[Creación de funciones](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/funciones.SQL)
+
+[Creación de stored procedures](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/stored_procedures.SQL)
+
+[Creación de triggers](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/triggers.sql)
+
 [Diagrama Entidad-Relación](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/ER_DIAGRAMA%20POKEMON.pdf)
 
 [Comentarios](https://github.com/Nicoc39/SQL_PokemonGO_Carranza/blob/main/Comentarios.SQL)
