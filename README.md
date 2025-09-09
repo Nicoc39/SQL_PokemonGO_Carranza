@@ -98,7 +98,7 @@ Su objetivo es ver de forma agil todos los equipos registrados en un torneo en p
 
 ## 🗃️ Lista de Stored Procedures
 **Stored Procedure "registrar_equipo_completo":**
-- Esta compuesto por las tablas equipo, registro_torneo, pokemon y ataques. Permite registrar un equipo completo de un entrenador para un torneo. Su utilizacion automatiza y simplifica el proceso de inscripcion de equipos evitando errores manuales.
+- Esta compuesto por la tabla equipo. Permite registrar un equipo completo de un entrenador para un torneo. Su utilizacion automatiza y simplifica el proceso de inscripcion de equipos evitando errores manuales.
 
 **Stored Procedure "eliminar_equipo":**
 - Utiliza la tabla equipo para eliminar el equipo de un entrenador de un torneo en especifico. Su objetivo es una mejor gestion de bajas de manera segura.
