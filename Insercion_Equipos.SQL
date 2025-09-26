@@ -507,4 +507,36 @@ INSERT INTO equipo (id_registro, slot_pokemon, id_pokemon, ataque_rapido, ataque
 (63, 3, 777, 3, 121, 104, 1479), -- Togedamaru
 (63, 4, 146, 16, 123, 88, 1471), -- Moltres (Galar)
 (63, 5, 131, 24, 103, 57, 1490), -- Lapras
-(63, 6, 411, 39, 57, 104, 1492), -- Bastiodon;
+(63, 6, 411, 39, 57, 104, 1492); -- Bastiodon;
+
+
+
+/* INSERCION DE COMBATES  */
+INSERT INTO combate (id_torneo, id_entrenador1, id_entrenador2, ganador) VALUES
+(1, 17, 5, 17), -- Combate 1 ronda 1
+(1, 26, 24, 24), -- Combate 2 ronda 1
+(1, 3, 13, 3 ), -- Combate 3 ronda 1
+(1, 10, 2, 2), -- Combate 4 ronda 1
+(1, 15, 4, 15), -- Combate 5 ronda 1
+(1, 21, 20, 20), -- Combate 6 ronda 1
+(1, 18, 23, 18), -- Combate 7 ronda 1
+(1, 9, 1, 1), -- Combate 8 ronda 1
+(1, 27, 14, 14), -- Combate 9 ronda 1
+(1, 7, 8, 7), -- Combate 10 ronda 1
+(1,22,25, 25), -- combate 11 ronda 1
+(1, 17, 24, 24), -- combate 12 ronda 2
+(1, 3, 2, 3), -- combate 13 ronda 2
+(1, 15, 20, 15), -- combate 14 ronda 2
+(1, 18, 1, 18), -- combate 15 ronda 2
+(1, 14, 7, 7), -- combate 16 ronda 2
+(1, 25, 11, 11), -- combate 17 ronda 2
+(1, 19, 6, 19), -- combate 18 ronda 2
+(1, 16, 12, 12), -- combate 19 ronda 2
+(1, 24, 3, 3), -- combate 20 ronda 3
+(1, 15, 18, 18), -- combate 21 ronda 3
+(1, 7, 11, 11), -- combate 22 ronda 3
+(1, 19, 12, 19), -- combate 23 ronda 3
+(1, 3, 18, 3), -- combate 24 ronda 4
+(1, 11, 19, 11), -- combate 25 ronda 4
+(1, 18, 19, 19), -- combate 26 ronda 5 (tercer y cuarto puesto)
+(1, 3, 11, 3); -- combate 27 ronda 5 (primer y segundo puesto)

@@ -1,3 +1,5 @@
+USE pkmn;
+
 -- Registrar un nuevo equipo completo para un torneo
 DELIMITER //
 CREATE PROCEDURE registrar_equipo_completo(
@@ -19,6 +21,16 @@ BEGIN
 END//
 DELIMITER ;
 
+
+-- Asignar puntos a todos los participantes de un torneo según su puesto
+DELIMITER //
+CREATE PROCEDURE asignar_puntos_torneo(IN torneo_id INT)
+BEGIN
+    UPDATE posiciones
+    SET puntos = puntos_por_puesto(puesto)
+    WHERE id_torneo = torneo_id;
+END//
+DELIMITER ;
 
 --  Eliminar un equipo completo de un torneo
 DELIMITER //

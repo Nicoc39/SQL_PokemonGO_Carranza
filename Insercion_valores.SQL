@@ -390,4 +390,5 @@ INSERT INTO registro_torneo (id_entrenador, id_torneo) VALUES
 (29,3),
 (30,3),
 (31,3),
-(33,3);
+(33,3),
+(1,4); -- se usa para prueba 3

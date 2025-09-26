@@ -1,4 +1,6 @@
--- Vista que muestra los nombres de los Pokémon con los nombres de sus tipos
+USE pkmn;
+
+-- Vista para ver los nombres de los Pokémon con los nombres de sus tipos
 CREATE VIEW vista_pokemon_tipos AS 
 SELECT p.pokemon AS nombre_pokemon,
        t1.nombre_tipo AS tipo_primario,
@@ -6,6 +8,8 @@ SELECT p.pokemon AS nombre_pokemon,
 FROM pokemon p
 LEFT JOIN tipo t1 ON p.tipo_primario = t1.id_tipo
 LEFT JOIN tipo t2 ON p.tipo_secundario = t2.id_tipo;
+
+
 
 -- Vista que muestra los equipos de cada torneo con usuario, nombres de los 6 Pokémon, ataques y CP
 CREATE VIEW vista_equipos_torneo AS 
@@ -34,4 +38,41 @@ SELECT p.id_pokedex,
        veces_pokemon_llevado(p.id_pokedex) AS veces_usado
 FROM pokemon p
 ORDER BY veces_usado DESC;
+
+-- Vista de posiciones con puntos por torneo y usuario
+CREATE VIEW vista_posiciones_torneo AS 
+SELECT tor.nombre_torneo,
+       ent.usuario,
+       pos.puesto,
+        pos.puntos
+FROM posiciones pos
+JOIN torneo tor ON pos.id_torneo = tor.id_torneo
+JOIN entrenador ent ON pos.id_entrenador = ent.id_entrenador
+ORDER BY tor.nombre_torneo, pos.puesto, ent.usuario;
+
+
+-- Vista podio derivada de posiciones (top 3 por torneo)
+CREATE VIEW podio AS 
+SELECT pos.id_torneo,
+       tor.nombre_torneo,
+       pos.id_entrenador,
+       ent.usuario,
+       pos.puesto,
+       pos.puntos
+FROM posiciones pos
+JOIN torneo tor ON pos.id_torneo = tor.id_torneo
+JOIN entrenador ent ON pos.id_entrenador = ent.id_entrenador
+WHERE pos.puesto IN (1,2,3)
+ORDER BY pos.id_torneo, pos.puesto;
+
+-- Vista de ranking general por entrenador (suma de puntos en todos los torneos)
+CREATE VIEW ranking_general_entrenadores AS 
+SELECT ent.id_entrenador,
+       ent.usuario,
+       SUM(pos.puntos) AS puntos_totales
+FROM posiciones pos
+JOIN entrenador ent ON pos.id_entrenador = ent.id_entrenador
+GROUP BY ent.id_entrenador, ent.usuario
+ORDER BY puntos_totales DESC, ent.usuario ASC;
+
 

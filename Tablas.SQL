@@ -78,3 +78,34 @@ CREATE TABLE IF NOT EXISTS equipo (
     FOREIGN KEY (ataque_cargado1) REFERENCES ataques(id_mov),
     FOREIGN KEY (ataque_cargado2) REFERENCES ataques(id_mov)
 );
+
+
+-- Tabla para registrar combates de un torneo
+CREATE TABLE IF NOT EXISTS combate (
+	id_combate INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	id_torneo INT NOT NULL,
+	id_entrenador1 INT NOT NULL,
+	id_entrenador2 INT NOT NULL,
+	ganador INT NOT NULL,
+	FOREIGN KEY (id_torneo) REFERENCES torneo(id_torneo),
+	FOREIGN KEY (id_entrenador1) REFERENCES entrenador(id_entrenador),
+	FOREIGN KEY (id_entrenador2) REFERENCES entrenador(id_entrenador),
+	FOREIGN KEY (ganador) REFERENCES entrenador(id_entrenador),
+	CHECK (id_entrenador1 <> id_entrenador2),
+	CHECK (ganador IN (id_entrenador1, id_entrenador2))
+);
+ 
+-- Tabla para posiciones y puntos por torneo
+CREATE TABLE IF NOT EXISTS posiciones (
+	id_posicion INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	id_torneo INT NOT NULL,
+	id_entrenador INT NOT NULL,
+	puesto INT NOT NULL,
+	puntos INT NOT NULL DEFAULT 0,
+	FOREIGN KEY (id_torneo) REFERENCES torneo(id_torneo),
+	FOREIGN KEY (id_entrenador) REFERENCES entrenador(id_entrenador),
+	UNIQUE KEY uk_posiciones_torneo_entrenador (id_torneo, id_entrenador),
+	UNIQUE KEY uk_posiciones_torneo_puesto (id_torneo, puesto),
+	CHECK (puesto >= 1),
+	CHECK (puntos >= 0)
+);

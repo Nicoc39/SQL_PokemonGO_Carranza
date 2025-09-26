@@ -1,3 +1,6 @@
+USE pkmn;
+
+
 -- Función cantidad_equipos_torneo: Contar la cantidad de equipos registrados en un torneo
 DELIMITER //
 CREATE FUNCTION cantidad_equipos_torneo(id_torneo INT)
@@ -24,4 +27,22 @@ END//
 
 DELIMITER ;
 
+
+-- Función puntos_por_puesto: Devuelve puntos según el puesto de clasificación
+DELIMITER //
+CREATE FUNCTION puntos_por_puesto(puesto INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN CASE
+        WHEN puesto = 1 THEN 1200
+        WHEN puesto = 2 THEN 1000
+        WHEN puesto = 3 THEN 800
+        WHEN puesto = 4 THEN 600
+        WHEN puesto BETWEEN 5 AND 8 THEN 400
+        WHEN puesto BETWEEN 9 AND 16 THEN 200
+        ELSE 0
+    END;
+END//
+DELIMITER ;
 

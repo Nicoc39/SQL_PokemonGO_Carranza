@@ -1,3 +1,6 @@
+USE pkmn;
+
+
 -- Trigger para limitar a 6 Pokémon por equipo
 DELIMITER //
 CREATE TRIGGER equipo_max_seis BEFORE INSERT ON equipo
